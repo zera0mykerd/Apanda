@@ -1162,19 +1162,50 @@ conic-gradient(from 180deg at 50% 50%, rgba(255,255,255,0.08), rgba(255,255,255,
       <div class="form-group">
         <label for="tipoPatente">Tipo Patente *</label>
         <select id="tipoPatente" name="tipoPatente" required>
-          <option value="">Seleziona...</option>
-          <option value="A">Patente A</option>
-          <option value="A1">Patente A1</option>
-          <option value="A2">Patente A2</option>
-          <option value="B">Patente B</option>
-          <option value="C">Patente C</option>
-          <option value="C1">Patente C1</option>
-          <option value="D">Patente D</option>
-          <option value="D1">Patente D1</option>
-          <option value="BE">Patente BE</option>
-          <option value="CE">Patente CE</option>
-          <option value="DE">Patente DE</option>
-        </select>
+  <option value="">Seleziona...</option>
+  
+  <!-- Patenti terrestri -->
+  <optgroup label="Patenti terrestri">
+    <option value="AM">Patente AM (ciclomotori)</option>
+    <option value="A1">Patente A1 (moto leggere)</option>
+    <option value="A2">Patente A2 (moto fino a 35 kW)</option>
+    <option value="A">Patente A (moto senza limiti)</option>
+    <option value="B1">Patente B1 (quadricicli pesanti)</option>
+    <option value="B">Patente B (auto)</option>
+    <option value="B96">Patente B96 (auto + rimorchio >750kg)</option>
+    <option value="BE">Patente BE (auto + rimorchio pesante)</option>
+    <option value="C1">Patente C1 (camion medi)</option>
+    <option value="C1E">Patente C1E (C1 + rimorchio)</option>
+    <option value="C">Patente C (camion pesanti)</option>
+    <option value="CE">Patente CE (C + rimorchio)</option>
+    <option value="D1">Patente D1 (minibus)</option>
+    <option value="D1E">Patente D1E (D1 + rimorchio)</option>
+    <option value="D">Patente D (autobus)</option>
+    <option value="DE">Patente DE (D + rimorchio)</option>
+  </optgroup>
+  
+  <!-- Certificati professionali -->
+  <optgroup label="Certificati professionali">
+    <option value="CQC_M">CQC Merci</option>
+    <option value="CQC_P">CQC Persone</option>
+    <option value="CAP_KA">CAP KA (motocarrozzette a servizio pubblico)</option>
+    <option value="CAP_KB">CAP KB (taxi e NCC)</option>
+    <option value="ADR">CFP ADR (trasporto merci pericolose)</option>
+  </optgroup>
+  
+  <!-- Patenti nautiche -->
+  <optgroup label="Patenti nautiche">
+    <option value="NAUT_ENTRO">Patente Nautica entro 12 miglia</option>
+    <option value="NAUT_OLTRE">Patente Nautica senza limiti</option>
+    <option value="NAUT_NAVI">Patente Nautica per navi da diporto</option>
+  </optgroup>
+  
+  <!-- Altri patentini -->
+  <optgroup label="Altri patentini">
+    <option value="AGRI">Patentino Macchine Agricole</option>
+    <option value="OPER">Patentino Macchine Operatrici</option>
+  </optgroup>
+</select>
       </div>
       
       <div class="form-group">
@@ -1378,10 +1409,10 @@ conic-gradient(from 180deg at 50% 50%, rgba(255,255,255,0.08), rgba(255,255,255,
   const errorMsg = document.getElementById('errorMessage');
   const dataScadenzaInput = document.getElementById('dataScadenza');
   
-  // Imposta data minima (oggi) e massima (10 anni)
+  // Imposta data minima (oggi) e massima (TOT anni)
   const oggi = new Date();
   const dataMin = oggi.toISOString().split('T')[0];
-  const dataMax = new Date(oggi.getFullYear() + 10, oggi.getMonth(), oggi.getDate()).toISOString().split('T')[0];
+  const dataMax = new Date(oggi.getFullYear() + 40, oggi.getMonth(), oggi.getDate()).toISOString().split('T')[0];
   dataScadenzaInput.setAttribute('min', dataMin);
   dataScadenzaInput.setAttribute('max', dataMax);
   
