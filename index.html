@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="it">
 <head>
@@ -1117,7 +1118,106 @@ conic-gradient(from 180deg at 50% 50%, rgba(255,255,255,0.08), rgba(255,255,255,
 		<li>&#128271; Corso avanzato sulla sicurezza</li>
       </ul>
     </article>
+	
+	<article class="course">
+  <h4>Formazione Sicurezza – Generale</h4>
+  <ul>
+    <li>&#129504; Corsi Base per la Sicurezza sul Lavoro
+      <ul>
+        <li>Corso di Formazione Generale dei Lavoratori (4 ore)</li>
+        <li>Corso di Formazione Specifica dei Lavoratori</li>
+        <li>Rischio Basso (4 ore)</li>
+        <li>Rischio Medio (8 ore)</li>
+        <li>Rischio Alto (12 ore)</li>
+        <li>Aggiornamento Lavoratori (6 ore ogni 5 anni)</li>
+      </ul>
+    </li>
+
+    <li>&#128119;&#8205;&#9794;&#65039; Corsi per Preposti e Dirigenti
+      <ul>
+        <li>Formazione Preposti (8 ore)</li>
+        <li>Aggiornamento Preposti (6 ore ogni 5 anni)</li>
+        <li>Formazione Dirigenti (16 ore)</li>
+        <li>Aggiornamento Dirigenti (6 ore ogni 5 anni)</li>
+      </ul>
+    </li>
+
+    <li>&#128299; Corsi Antincendio
+      <ul>
+        <li>Livello 1 – 4 ore</li>
+        <li>Livello 2 – 8 ore</li>
+        <li>Livello 3 – 16 ore</li>
+        <li>Aggiornamento Antincendio</li>
+      </ul>
+    </li>
+
+    <li>&#9939;&#65039; Corsi di Primo Soccorso
+      <ul>
+        <li>Gruppo A – 16 ore</li>
+        <li>Gruppo B e C – 12 ore</li>
+        <li>Aggiornamento (4 o 6 ore ogni 3 anni)</li>
+      </ul>
+    </li>
+
+    <li>&#9881;&#65039; Corsi per Datore di Lavoro RSPP
+      <ul>
+        <li>Rischio Basso – 16 ore</li>
+        <li>Rischio Medio – 32 ore</li>
+        <li>Rischio Alto – 48 ore</li>
+        <li>Aggiornamento (6, 10 o 14 ore ogni 5 anni)</li>
+      </ul>
+    </li>
+
+    <li>&#128222; Corsi per Figure Specifiche
+      <ul>
+        <li>RLS – 32 ore</li>
+        <li>Aggiornamento RLS – 4 o 8 ore ogni anno</li>
+        <li>Coordinatore Sicurezza Cantieri – 120 ore</li>
+        <li>Aggiornamento Coordinatore – 40 ore ogni 5 anni</li>
+        <li>Formatori della Sicurezza – 24 ore</li>
+      </ul>
+    </li>
+  </ul>
+</article>
+
+
+<article class="course">
+  <h4>Formazione Sicurezza – Abilitazioni e Settori</h4>
+  <ul>
+    <li>&#129520; Corsi per Addetti e Abilitazioni Specifiche
+      <ul>
+        <li>Carrelli Elevatori (Muletto) – 12 ore</li>
+        <li>Piattaforme di Lavoro Elevabili (PLE) – 8 ore</li>
+        <li>Gru su Autocarro – 12 ore</li>
+        <li>Gru a Torre – 12 ore</li>
+        <li>Gru Mobile – 14 ore</li>
+        <li>Gru per Autocarri</li>
+        <li>Escavatori, Pale, Terne, Autoribaltabili – 16 ore</li>
+        <li>Trattori Agricoli e Forestali – 8 ore</li>
+        <li>Motoseghe e Decespugliatori</li>
+        <li>Ponteggi – 28 ore</li>
+        <li>Lavori in Quota e DPI III cat. – 8 ore</li>
+        <li>Segnaletica Cantieri Stradali – 8 ore</li>
+        <li>Uso di Funi e Argani</li>
+        <li>Uso di Scale e Trabattelli</li>
+      </ul>
+    </li>
+
+    <li>&#128667; Corsi Settoriali e Professionali
+      <ul>
+        <li>Trasporto Merci Pericolose (ADR)</li>
+        <li>Carico/Scarico Merci in Sicurezza</li>
+        <li>Gestione Rifiuti (Resp. Tecnico Cat. 1-4-5)</li>
+        <li>Conduzione Autocarri e Autobus in Sicurezza</li>
+        <li>Aggiornamenti Periodici per tutte le Abilitazioni</li>
+      </ul>
+    </li>
+  </ul>
+</article>
+
+	
   </div>
+  
 </section>
 
 
@@ -1273,7 +1373,7 @@ conic-gradient(from 180deg at 50% 50%, rgba(255,255,255,0.08), rgba(255,255,255,
         </div>
 		        <div class="contact-row">
          		<span class="label">&#128387; SMS:</span>
-          <a title="Contatto SMS 1" href="sms:3283763660"><span class="value">SMS a 3283763660</span></a>
+          <a title="Contatto SMS 1" href="sms:3283763660"><span class="value">SMS a 3283763660</span></a> | <a title="Contatto SMS 2" href="sms:3519820687"><span class="value">SMS a 3519820687</span></a>
         </div>
         <div class="contact-row">
           <span class="label">&#128386; Email:</span>
@@ -1693,5 +1793,42 @@ Inviato da Autoscuola Panda
   
 })();
  
+ 
+ //SISTEMA HTTPS AUTOMATICO
+(function() {
+  const isLocalhost = location.hostname === 'localhost';
+  const isLocalIP = location.hostname === '127.0.0.1';
+  const isFileProtocol = location.protocol === 'file:';
+  const isHttps = location.protocol === 'https:';
+
+  // Controlla se ci si trova in un ambiente non sicuro
+  if (!isHttps && !isLocalhost && !isLocalIP && !isFileProtocol) {
+    try {
+      const newUrl = 'https:' + window.location.href.substring(window.location.protocol.length);
+      location.href = newUrl; // Reindirizza a HTTPS
+    } catch (error) {
+      alert("Errore nel reindirizzamento: " + error);
+    }
+  }
+})();
+
+
+var __x9qzHostCheck__ = window.location.hostname;
+function __x9qzRedirector__() {
+  if (__x9qzHostCheck__ === "autoscuolapanda.altervista.org") {
+    try {
+      var __x9qzNewUrl__ = window.location.href.replace(
+        "autoscuolapanda.altervista.org",
+        "www.autoscuolapanda.it"
+      );
+      window.location.href = __x9qzNewUrl__;
+    } catch (__x9qzError__) {
+      console.error("Redirect error (__x9qz__):", __x9qzError__);
+    }
+  }
+}
+
+__x9qzRedirector__();
+
   </script>
 </html>
